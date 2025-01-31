@@ -79,7 +79,13 @@ function App() {
     onSuccess: (user) => {
       console.log(user);
       toast.success("Registration successful"); 
-    
+      reset({
+      name:"",
+      email:"",
+      password:"",
+      confirmpassword:"",
+      checkbox:""
+    })
     },
     onError: (error) => {
       console.error("Registration failed:", error);
@@ -95,13 +101,7 @@ function App() {
       confirmpassword: data.confirmpassword.trim(),
       checkbox: data.checkbox,
     });
-    reset({
-      name:"",
-      email:"",
-      password:"",
-      confirmpassword:"",
-      checkbox:""
-    })
+   
   };
 
   return (
