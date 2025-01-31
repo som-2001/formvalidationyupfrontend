@@ -77,7 +77,7 @@ function App() {
     },
     onSuccess: (user) => {
       console.log(user);
-      toast.success("Registration successful");
+      toast.success("Registration successful"); 
     
     },
     onError: (error) => {
