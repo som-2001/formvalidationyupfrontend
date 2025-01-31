@@ -65,6 +65,7 @@ function App() {
     handleSubmit,
     formState: { errors },
     control,
+    reset
   } = useForm({
     resolver: yupResolver(schema),
   });
@@ -94,6 +95,13 @@ function App() {
       confirmpassword: data.confirmpassword.trim(),
       checkbox: data.checkbox,
     });
+    reset({
+      name:"",
+      email:"",
+      password:"",
+      confirmpassword:"",
+      checkbox:""
+    })
   };
 
   return (
